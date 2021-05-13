@@ -4,22 +4,22 @@
 * Ensure you have a serverless installed on your machine
 * create an aws profile called bant
 ```
-aws configure --profile bant
+ aws configure --profile bant
 ```
 * Follow the rest of the process of configuring aws secrete access key [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).
 * install packages
 ```
-npm i
+ yarn install
 ```
 * deploy to aws lambda with
 ```
-serverless deploy
+ serverless deploy
 ```
 * You can also start local server with `serverless offline start`
 
 * To Load initial data to dynamo db after deploy run this command in the project root folder
 ```
-node server/seeder/addLeads.js
+ node server/seeder/addLeads.js
 ```
 
 ## Run test on your local
@@ -27,7 +27,7 @@ node server/seeder/addLeads.js
 
 ## Some API Documentation
 ```
-Base url: https://1deqyn3uk5.execute-api.us-west-2.amazonaws.com/dev/v1
+ Base url: https://1deqyn3uk5.execute-api.us-west-2.amazonaws.com/dev/v1
 ```
 * Create a User
 

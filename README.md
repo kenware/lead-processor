@@ -6,7 +6,7 @@
 ```
 aws configure --profile bant
 ```
-* Follow the rest of the process of configuring aws secrete key.
+* Follow the rest of the process of configuring aws secrete access key [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).
 * install packages
 ```
 npm i
@@ -16,6 +16,11 @@ npm i
 serverless deploy
 ```
 * You can also start local server with `serverless offline start`
+
+* To Load initial data to dynamo db after deploy run this command in the project root folder
+```
+node server/seeder/addLeads.js
+```
 
 ## Run test on your local
 * Run test with `npm test`

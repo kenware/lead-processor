@@ -24,4 +24,11 @@ export default class Auth {
       return Handler.errorHandler(req, res, err.message || 'Invalid token', 401);
     }
   }
+
+  static async IsAdmin(req, res, next) {
+    if (req.decoded.isAdmin) {
+      return next();
+    }
+    return Handler.errorHandler(req, res, 'Insufficient privilege', 401);
+  }
 }

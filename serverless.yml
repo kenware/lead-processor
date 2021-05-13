@@ -69,7 +69,7 @@ functions:
   inactiveLeadCrone: # Automatically release assignement if the user is Inactive for more than 120sec
     handler: handler.RealeaseInProgressLead
     events:
-      - schedule: cron(*/35 * * * ? *)
+      - schedule: cron(*/1 * * * ? *)
 
 resources:
   Resources:

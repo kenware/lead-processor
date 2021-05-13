@@ -11,8 +11,7 @@ export default class User {
    */
   static async create(req, res) {
     const { email, name } = req.body;
-
-    const items = getUserItems(email, {name, password: req.hash, isAdmin: true, isActive: true });
+    const items = getUserItems(email, {name, password: req.hash, isAdmin: false, isActive: true });
     try {
       await dynamoDbClient.put(items).promise();
       const token = Handler.generateToken(email, name, false);

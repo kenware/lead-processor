@@ -1,10 +1,8 @@
 import Validator from 'validatorjs';
 import bcrypt from 'bcryptjs';
-import AWS from "aws-sdk";
 import Handler from '../utils/handler';
 import { getUserParams } from '../utils/params';
-
-const dynamoDbClient = new AWS.DynamoDB.DocumentClient();
+import dynamoDbClient from '../models';
 
 export default class User {
   /**

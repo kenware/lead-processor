@@ -13,9 +13,14 @@ export default class User {
    */
   static async create(req, res) {
     const { email, name } = req.body;
+<<<<<<< Updated upstream
     
     const items = getUserItems(email, {name, password: req.hash, isAdmin: true });
     console.log(items)
+=======
+
+    const items = getUserItems(email, {name, password: req.hash, isAdmin: false, isActive: true });
+>>>>>>> Stashed changes
     try {
       await dynamoDbClient.put(items).promise();
       const token = Handler.generateToken(email, false);
